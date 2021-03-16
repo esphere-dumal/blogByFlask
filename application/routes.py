@@ -50,3 +50,15 @@ def uploading():
         open(filepath, 'w')
     f.save(filepath)
     return 'file uploaded'
+
+
+@app.route('/<name>')
+def show(name):
+    filename = os.path.join(app.config['UPLOAD_FOLDER'], name)
+    if not os.path.isfile(filename):
+        return '404 not found', 404
+    try:
+        fp = open(filename, 'r')
+        return fp.read()
+    except IOError:
+        return 'can\'t open file', 404
