@@ -1,0 +1,124 @@
+<!--注释-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--meta描述性标签一般用于做SEO-->
+    <meta charset="UTF-8">
+    <meta name="keywords" content="test">
+    <meta name="descrition" content="some thing">
+    <title>first of all</title>
+</head>
+
+<body>
+<a name="top"></a>
+Hello,worlds<br/>
+水平线<hr><br/>
+<strong>粗体</strong><br/>
+<em>斜体</em><br/>
+空格：&nbsp;<br/>
+大于：&gt;<br/>
+小于：&lt;<br/>
+版权:&copy;<br/>
+
+<img src="path" alt="test img" title="hangOver">
+<!--path可用相对路径（推荐）或者绝对路径-->
+<!--../resource/image/xxx-->
+
+<!--连接标签-->
+<a href="https://www.baidu.com" target="_self">press_to_go</a>
+<a href="#top">press_to_top</a>
+
+
+<!--列表-->
+<!--有序-->
+<ol>
+    <li>java</li>
+    <li>python</li>
+</ol>
+
+<!--无序-->
+<ul>
+    <li>a</li>
+    <li>b</li>
+</ul>
+<!--自定义-->
+<dl>
+    <dt>标题</dt>
+    <dd>java</dd>
+    <dd>abc</dd>
+    <dt>标题2</dt>
+    <dd>agfda</dd>
+</dl>
+
+<!--表格-->
+<!--tr行 td列-->
+<table border="1px">
+    <tr>
+        <td> 1-1 </td>
+        <td> 1-2 </td>
+        <td> 1-3 </td>
+    </tr>
+</table>
+
+
+<!--内联框架-->
+<iframe src="https://www.baidu.com" frameborder="0" width="1000px" height="800px"></iframe>
+
+<!--表单-->
+<!--表单提交的位置可以是网站，也可以是一个请求处理地址-->
+<form method="get" action="demo01.html">
+
+    <p>username: <input type="text" name="username"> </p>
+    <p>password: <input type="text" name="password"> </p>
+
+    <p>
+        <input type="radio" value="male" name="sex">male
+        <input type="radio" value="female" name="sex">female
+    <!--相同组 name=sex 则仅能单选-->
+    </p>
+
+    <p>
+        <input type="checkbox" value="java" name="coding">java
+        <input type="checkbox" value="python" name="coding">python
+        <input type="checkbox" value="c++" name="coding">c++
+        <input type="checkbox" value="html" name="coding">html
+    </p>
+
+    <p>
+        <input type="button" name="btn1" value="press to go">
+    </p>
+    <!--下拉框-->
+    <p>
+        <select name="list">
+            <option value="opt">java</option>
+            <option value="opt">c++</option>
+            <option value="opt">python</option>
+            <option value="opt">go</option>
+        </select>
+    </p>
+
+    <!--文本域-->
+    <p>
+        <textarea name="textarea" cols="10" rows="15">something</textarea>
+    </p>
+    <!--文件域-->
+    <p>
+        <input type="file" name="files">
+    </p>
+
+    <p>
+        <input type="submit">
+        <input type="reset" value="清空">
+    </p>
+
+    <p>
+        <input type="range" name="voice" min="0" max="100" step="2">
+        <!--step为初始值-->
+    </p>
+    <p> search
+        <input type="search" name="sth">
+    </p>
+</form>
+</body>
+</html>
