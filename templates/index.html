@@ -10,5 +10,9 @@
     </head>
     <body>
         <h1>Hello, there!</h1>
+        {% for filename in fileList %}
+            <br><a href="{{ url_for('show', name=filename) }}">{{ filename }}</a>
+        {% endfor %}
+        <br> <a href="{{ url_for('upload') }}">uploading a new post</a>
     </body>
 </html>

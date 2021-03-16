@@ -1,4 +1,4 @@
-from application import app
+from application import app, init_post_list
 from flask import render_template, request, session, redirect, url_for, flash
 import os
 from werkzeug.utils import secure_filename
@@ -10,7 +10,8 @@ kPassword = 'esp'
 @app.route('/')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='esp@1.0.0')
+    file_list = init_post_list()
+    return render_template('index.html', title='esp@1.0.0', fileList=file_list)
 
 
 # 验证身份
@@ -52,7 +53,7 @@ def uploading():
     return 'file uploaded'
 
 
-@app.route('/<name>')
+@app.route('/post/<name>')
 def show(name):
     filename = os.path.join(app.config['UPLOAD_FOLDER'], name)
     if not os.path.isfile(filename):
